@@ -1,10 +1,10 @@
 ---
 - name: Install Nginx webserver
-  package:
-    name: nginx
-    state: present
+  hosts: your_host_group
   become: yes
-  vars:
-    use_backend: apt
-
+  tasks:
+    - name: Ensure Nginx is installed
+      package:
+        name: nginx
+        state: present
 ...
