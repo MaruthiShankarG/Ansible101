@@ -1,10 +1,10 @@
 ---
-- name: NGINX
-  hosts: all
+- name: Install Nginx webserver
+  package:
+    name: nginx
+    state: present
   become: yes
-  tasks:
-    - name: Install Nginx webserver
-      dnf:
-        name: nginx
-        state: present
+  vars:
+    use_backend: apt
+
 ...
