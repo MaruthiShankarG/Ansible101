@@ -1,6 +1,6 @@
 ---
 - name: Install Nginx webserver
-  hosts: your_host_group
+  hosts: Testing_Inventory
   become: yes
   tasks:
     - name: Ensure Nginx is installed
